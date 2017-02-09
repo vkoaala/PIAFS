@@ -1,0 +1,22 @@
+[2017-02-09 9:19:41]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/09/20170209091941-0bb785aa.pdf, $representative_ext = 
+[2017-02-09 9:19:41]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/09/20170209091941-0bb785aa.pdf, $representative_ext = jpg
+[2017-02-09 9:19:41]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/09/20170209091941-0bb785aa.pdf, $representative_ext = jpg
+[2017-02-09 9:19:41]	[INFO]	Handling ././upload/2017/02/09/20170209091941-0bb785aa.pdf got jpg
+[2017-02-09 9:19:41]	[DEBUG]	[i.php]	convert "/var/www/html/Piwigo/upload/2017/02/09/pwg_representative/20170209091941-0bb785aa.jpg" -filter Lanczos -resize 111x144! -strip -quality 95 -interlace line -sampling-factor 4:2:2 "/var/www/html/Piwigo/_data/i/upload/2017/02/09/pwg_representative/20170209091941-0bb785aa-th.jpg" 2>&1
+[2017-02-09 9:19:41]	[DEBUG]	[i.php]	
+  src_path: '20170209091941-0bb785aa.jpg'
+  derivative_path: '20170209091941-0bb785aa-th.jpg'
+  o_size: '612 792 484704'
+  d_size: '111 144 15984'
+  mem_usage: 0.69999999999999996
+  timing: array(
+    'load' => 14,
+    'rotate' => '',
+    'crop' => '',
+    'scale' => 0,
+    'sharpen' => '',
+    'watermark' => '',
+    'save' => 23,
+    'send' => 0,
+    'total' => 38,
+  )
