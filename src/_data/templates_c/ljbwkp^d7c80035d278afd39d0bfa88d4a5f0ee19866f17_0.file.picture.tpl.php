@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-10 09:05:33
+/* Smarty version 3.1.29, created on 2017-02-10 11:26:48
   from "/var/www/html/PIAFS/src/themes/default/template/picture.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_589dc8ad451562_23563679',
+  'unifunc' => 'content_589de9c8183868_57067334',
   'file_dependency' => 
   array (
     'd7c80035d278afd39d0bfa88d4a5f0ee19866f17' => 
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:comment_list.tpl' => 1,
   ),
 ),false)) {
-function content_589dc8ad451562_23563679 ($_smarty_tpl) {
+function content_589de9c8183868_57067334 ($_smarty_tpl) {
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'core.switchbox','load'=>'async','require'=>'jquery','path'=>'themes/default/js/switchbox.js'),$_smarty_tpl);?>
 
 <?php if (isset($_smarty_tpl->tpl_vars['MENUBAR']->value)) {
@@ -279,9 +279,7 @@ if (isset($_smarty_tpl->tpl_vars['next']->value)) {?>
 <?php }?>
 
 <dl id="standard" class="imageInfoTable">
-<div id="Skeleton" class="imageInfo"> <dt><?php echo l10n('Skeleton');?>
-</dt> <dd style="color:orange;"><?php echo l10n('Piwigo rocks');?>
-</dd> </div><?php if ($_smarty_tpl->tpl_vars['display_info']->value['author'] && isset($_smarty_tpl->tpl_vars['INFO_AUTHOR']->value)) {?><div id="Author" class="imageInfo"> <dt><?php echo l10n('Author');?>
+<?php if ($_smarty_tpl->tpl_vars['display_info']->value['author'] && isset($_smarty_tpl->tpl_vars['INFO_AUTHOR']->value)) {?><div id="Author" class="imageInfo"> <dt><?php echo l10n('Author');?>
 </dt> <dd><?php echo $_smarty_tpl->tpl_vars['INFO_AUTHOR']->value;?>
 </dd> </div><?php }
 if ($_smarty_tpl->tpl_vars['display_info']->value['created_on'] && isset($_smarty_tpl->tpl_vars['INFO_CREATION_DATE']->value)) {?><div id="datecreate" class="imageInfo"> <dt><?php echo l10n('Created on');?>

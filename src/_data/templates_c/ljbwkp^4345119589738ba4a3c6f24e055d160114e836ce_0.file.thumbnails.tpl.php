@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-10 09:05:31
+/* Smarty version 3.1.29, created on 2017-02-10 11:26:46
   from "/var/www/html/PIAFS/src/themes/default/template/thumbnails.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_589dc8ab70c533_21226600',
+  'unifunc' => 'content_589de9c6f127a0_02271842',
   'file_dependency' => 
   array (
     '4345119589738ba4a3c6f24e055d160114e836ce' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_589dc8ab70c533_21226600 ($_smarty_tpl) {
+function content_589de9c6f127a0_02271842 ($_smarty_tpl) {
 if (!empty($_smarty_tpl->tpl_vars['thumbnails']->value)) {
 $_smarty_tpl->smarty->_cache['tag_stack'][] = array('html_style', array()); $_block_repeat=true; echo $_smarty_tpl->smarty->registered_plugins['block']['html_style'][0][0]->block_html_style(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 .thumbnails SPAN,.thumbnails .wrap2 A,.thumbnails LABEL{width: <?php echo $_smarty_tpl->tpl_vars['derivative_params']->value->max_width()+2;?>

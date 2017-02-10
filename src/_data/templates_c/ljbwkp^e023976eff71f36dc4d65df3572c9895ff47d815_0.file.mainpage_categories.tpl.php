@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-09 10:32:02
+/* Smarty version 3.1.29, created on 2017-02-10 11:26:41
   from "/var/www/html/PIAFS/src/themes/default/template/mainpage_categories.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_589c8b726aaf95_13808686',
+  'unifunc' => 'content_589de9c1a41c63_28895118',
   'file_dependency' => 
   array (
     'e023976eff71f36dc4d65df3572c9895ff47d815' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_589c8b726aaf95_13808686 ($_smarty_tpl) {
+function content_589de9c1a41c63_28895118 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_replace')) require_once '/var/www/html/PIAFS/src/include/smarty/libs/plugins/modifier.replace.php';
 $_smarty_tpl->smarty->_cache['tag_stack'][] = array('html_style', array()); $_block_repeat=true; echo $_smarty_tpl->smarty->registered_plugins['block']['html_style'][0][0]->block_html_style(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 .thumbnailCategory .illustration{width: <?php echo $_smarty_tpl->tpl_vars['derivative_params']->value->max_width()+5;?>

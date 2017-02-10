@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-10 09:05:33
+/* Smarty version 3.1.29, created on 2017-02-10 11:26:48
   from "/var/www/html/PIAFS/src/themes/default/template/picture_nav_buttons.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_589dc8ad46fb33_30180695',
+  'unifunc' => 'content_589de9c81a1fa8_08695991',
   'file_dependency' => 
   array (
     '6cb522f9b1d08f8f07bfe7ecd46f69ea991e49c2' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_589dc8ad46fb33_30180695 ($_smarty_tpl) {
+function content_589de9c81a1fa8_08695991 ($_smarty_tpl) {
 ?>
 <div class="navigationButtons">
 <?php if ($_smarty_tpl->tpl_vars['DISPLAY_NAV_BUTTONS']->value || isset($_smarty_tpl->tpl_vars['slideshow']->value)) {
