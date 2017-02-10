@@ -1,0 +1,54 @@
+[2017-02-10 9:05:31]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:31]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:31]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:31]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:33]	[DEBUG]	[i.php]	convert "/var/www/html/PIAFS/src/upload/2017/02/09/pwg_representative/20170209091941-0bb785aa.jpg" -crop 612x612+0+90 -filter Lanczos -resize 120x120! -strip -quality 95 -interlace line -sampling-factor 4:2:2 "/var/www/html/PIAFS/src/_data/i/upload/2017/02/09/pwg_representative/20170209091941-0bb785aa-sq.jpg" 2>&1
+[2017-02-10 9:05:33]	[DEBUG]	[i.php]	
+  src_path: '20170209091941-0bb785aa.jpg'
+  derivative_path: '20170209091941-0bb785aa-sq.jpg'
+  o_size: '612 792 484704'
+  d_size: '120 120 14400'
+  mem_usage: 0.59999999999999998
+  timing: array(
+    'load' => 31,
+    'rotate' => '',
+    'crop' => 0,
+    'scale' => 0,
+    'sharpen' => '',
+    'watermark' => '',
+    'save' => 26,
+    'send' => 0,
+    'total' => 57,
+  )
+[2017-02-10 9:05:38]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:38]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:38]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:38]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:41]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:41]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:41]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:41]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:56]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:56]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:56]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:56]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg&ajaxload=true'
+[2017-02-10 9:05:58]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg'
+[2017-02-10 9:05:58]	[ERROR]	[i.php]	404 Source not found
+  url: '/PIAFS/src/i.php?/upload/2017/02/09/pwg_representative/20170209103852-5a2be8bd-th.jpg'
