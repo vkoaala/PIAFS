@@ -21,6 +21,8 @@ define('USER_INFO_PUBLIC',  get_absolute_root_url() . make_index_url(array('sect
 // | Add event handlers                                                    |
 // +-----------------------------------------------------------------------+
 
+add_event_handler('init', 'user_info_init');
+
 if(!defined('IN_ADMIN')){
   // file containing all public handlers functions
   $public_file = USER_INFO_PATH . 'include/public_events.inc.php';
@@ -49,9 +51,17 @@ function user_info_admin_menu($menu){
     array(
       'NAME' => 'user_info',
       'URL' => get_admin_plugin_menu_link(dirname(__FILE__)).'/admin.php'
-      )
-    );
-    return $menu;
-  }
+    )
+  );
+  return $menu;
+}
 
-  ?>
+function user_info_init()
+{
+  global $conf;
+
+  // load plugin language file
+  load_language('plugin.lang', USER_INFO_PATH);
+}
+
+?>
