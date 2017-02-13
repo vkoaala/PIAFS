@@ -1,0 +1,1 @@
+Pozwala dodawać do galerii pliki "niegraficzne" (np. .flv, .mp3, .pdf i inne).

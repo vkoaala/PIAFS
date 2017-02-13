@@ -1,0 +1,140 @@
+[2017-02-13 11:07:31]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213110731-fa5e77b1.jpg, $representative_ext = 
+[2017-02-13 11:07:31]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213110731-fa5e77b1.jpg, $representative_ext = 
+[2017-02-13 11:07:31]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213110731-fa5e77b1.jpg, $representative_ext = 
+[2017-02-13 11:07:31]	[INFO]	Handling ././upload/2017/02/13/20170213110731-fa5e77b1.jpg got 
+[2017-02-13 11:07:31]	[DEBUG]	[i.php]	convert "/var/www/html/upload/2017/02/13/20170213110731-fa5e77b1.jpg" -filter Lanczos -resize 144x64! -strip -quality 95 -interlace line -sampling-factor 4:2:2 "/var/www/html/_data/i/upload/2017/02/13/20170213110731-fa5e77b1-th.jpg" 2>&1
+[2017-02-13 11:07:31]	[DEBUG]	[i.php]	
+  src_path: '20170213110731-fa5e77b1.jpg'
+  derivative_path: '20170213110731-fa5e77b1-th.jpg'
+  o_size: '363 162 58806'
+  d_size: '144 64 9216'
+  mem_usage: 0.69999999999999996
+  timing: array(
+    'load' => 19,
+    'rotate' => '',
+    'crop' => '',
+    'scale' => 0,
+    'sharpen' => '',
+    'watermark' => '',
+    'save' => 12,
+    'send' => 0,
+    'total' => 31,
+  )
+[2017-02-13 11:07:31]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213110731-bb8ea9d1.pdf, $representative_ext = 
+[2017-02-13 11:07:31]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213110731-bb8ea9d1.pdf, $representative_ext = jpg
+[2017-02-13 11:07:31]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213110731-bb8ea9d1.pdf, $representative_ext = jpg
+[2017-02-13 11:07:31]	[INFO]	Handling ././upload/2017/02/13/20170213110731-bb8ea9d1.pdf got jpg
+[2017-02-13 11:07:31]	[DEBUG]	[i.php]	convert "/var/www/html/upload/2017/02/13/pwg_representative/20170213110731-bb8ea9d1.jpg" -filter Lanczos -resize 111x144! -strip -quality 95 -interlace line -sampling-factor 4:2:2 "/var/www/html/_data/i/upload/2017/02/13/pwg_representative/20170213110731-bb8ea9d1-th.jpg" 2>&1
+[2017-02-13 11:07:31]	[DEBUG]	[i.php]	
+  src_path: '20170213110731-bb8ea9d1.jpg'
+  derivative_path: '20170213110731-bb8ea9d1-th.jpg'
+  o_size: '612 792 484704'
+  d_size: '111 144 15984'
+  mem_usage: 0.40000000000000002
+  timing: array(
+    'load' => 14,
+    'rotate' => '',
+    'crop' => '',
+    'scale' => 0,
+    'sharpen' => '',
+    'watermark' => '',
+    'save' => 36,
+    'send' => 0,
+    'total' => 50,
+  )
+[2017-02-13 11:17:30]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213111730-8bc0155a.txt, $representative_ext = 
+[2017-02-13 11:17:30]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213111730-8bc0155a.txt, $representative_ext = 
+[2017-02-13 11:17:30]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213111730-8bc0155a.txt, $representative_ext = 
+[2017-02-13 11:17:30]	[INFO]	Handling ././upload/2017/02/13/20170213111730-8bc0155a.txt got 
+[2017-02-13 11:18:11]	[DEBUG]	[i.php]	convert "/var/www/html/upload/2017/02/13/pwg_representative/20170213110731-bb8ea9d1.jpg" -crop 612x612+0+90 -filter Lanczos -resize 120x120! -strip -quality 95 -interlace line -sampling-factor 4:2:2 "/var/www/html/_data/i/upload/2017/02/13/pwg_representative/20170213110731-bb8ea9d1-sq.jpg" 2>&1
+[2017-02-13 11:18:12]	[DEBUG]	[i.php]	
+  src_path: '20170213110731-bb8ea9d1.jpg'
+  derivative_path: '20170213110731-bb8ea9d1-sq.jpg'
+  o_size: '612 792 484704'
+  d_size: '120 120 14400'
+  mem_usage: 0.40000000000000002
+  timing: array(
+    'load' => 15,
+    'rotate' => '',
+    'crop' => 0,
+    'scale' => 0,
+    'sharpen' => '',
+    'watermark' => '',
+    'save' => 49,
+    'send' => 0,
+    'total' => 65,
+  )
+[2017-02-13 11:22:30]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213112230-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:22:30]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213112230-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:22:30]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213112230-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:22:30]	[INFO]	Handling ././upload/2017/02/13/20170213112230-a9b13903.txt got 
+[2017-02-13 11:25:05]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213112505-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:25:05]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213112505-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:25:05]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213112505-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:25:05]	[INFO]	Handling ././upload/2017/02/13/20170213112505-a9b13903.txt got 
+[2017-02-13 11:26:27]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213112627-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:26:27]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213112627-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:26:27]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213112627-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:26:27]	[INFO]	Handling ././upload/2017/02/13/20170213112627-a9b13903.txt got 
+[2017-02-13 11:28:41]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213112841-bb8ea9d1.pdf, $representative_ext = 
+[2017-02-13 11:28:42]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213112841-bb8ea9d1.pdf, $representative_ext = jpg
+[2017-02-13 11:28:42]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213112841-bb8ea9d1.pdf, $representative_ext = jpg
+[2017-02-13 11:28:42]	[INFO]	Handling ././upload/2017/02/13/20170213112841-bb8ea9d1.pdf got jpg
+[2017-02-13 11:28:42]	[DEBUG]	[i.php]	convert "/var/www/html/upload/2017/02/13/pwg_representative/20170213112841-bb8ea9d1.jpg" -filter Lanczos -resize 111x144! -strip -quality 95 -interlace line -sampling-factor 4:2:2 "/var/www/html/_data/i/upload/2017/02/13/pwg_representative/20170213112841-bb8ea9d1-th.jpg" 2>&1
+[2017-02-13 11:28:42]	[DEBUG]	[i.php]	
+  src_path: '20170213112841-bb8ea9d1.jpg'
+  derivative_path: '20170213112841-bb8ea9d1-th.jpg'
+  o_size: '612 792 484704'
+  d_size: '111 144 15984'
+  mem_usage: 0.69999999999999996
+  timing: array(
+    'load' => 16,
+    'rotate' => '',
+    'crop' => '',
+    'scale' => 0,
+    'sharpen' => '',
+    'watermark' => '',
+    'save' => 32,
+    'send' => 0,
+    'total' => 50,
+  )
+[2017-02-13 11:28:54]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213112854-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:28:54]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213112854-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:28:54]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213112854-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:28:54]	[INFO]	Handling ././upload/2017/02/13/20170213112854-a9b13903.txt got 
+[2017-02-13 11:29:20]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213112920-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:29:20]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213112920-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:29:20]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213112920-a9b13903.txt, $representative_ext = 
+[2017-02-13 11:29:20]	[INFO]	Handling ././upload/2017/02/13/20170213112920-a9b13903.txt got 
+[2017-02-13 12:53:27]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213125327-a9b13903.txt, $representative_ext = 
+[2017-02-13 12:53:27]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213125327-a9b13903.txt, $representative_ext = 
+[2017-02-13 12:53:27]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213125327-a9b13903.txt, $representative_ext = 
+[2017-02-13 12:53:27]	[INFO]	Handling ././upload/2017/02/13/20170213125327-a9b13903.txt got 
+[2017-02-13 12:53:42]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213125342-a9b13903.txt, $representative_ext = 
+[2017-02-13 12:53:42]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213125342-a9b13903.txt, $representative_ext = 
+[2017-02-13 12:53:42]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213125342-a9b13903.txt, $representative_ext = 
+[2017-02-13 12:53:42]	[INFO]	Handling ././upload/2017/02/13/20170213125342-a9b13903.txt got 
+[2017-02-13 12:55:08]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213125508-a9b13903.txt, $representative_ext = 
+[2017-02-13 12:55:08]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213125508-a9b13903.txt, $representative_ext = 
+[2017-02-13 12:55:08]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213125508-a9b13903.txt, $representative_ext = 
+[2017-02-13 12:55:08]	[INFO]	Handling ././upload/2017/02/13/20170213125508-a9b13903.txt got 
+[2017-02-13 13:02:19]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213130219-a9b13903.txt, $representative_ext = 
+[2017-02-13 13:02:19]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213130219-a9b13903.txt, $representative_ext = 
+[2017-02-13 13:02:19]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213130219-a9b13903.txt, $representative_ext = 
+[2017-02-13 13:02:19]	[INFO]	Handling ././upload/2017/02/13/20170213130219-a9b13903.txt got 
+[2017-02-13 13:04:19]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213130419-8f331182.txt, $representative_ext = 
+[2017-02-13 13:04:19]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213130419-8f331182.txt, $representative_ext = 
+[2017-02-13 13:04:19]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213130419-8f331182.txt, $representative_ext = 
+[2017-02-13 13:04:19]	[INFO]	Handling ././upload/2017/02/13/20170213130419-8f331182.txt got 
+[2017-02-13 13:16:46]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213131646-48a48720.txt, $representative_ext = 
+[2017-02-13 13:16:46]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213131646-48a48720.txt, $representative_ext = 
+[2017-02-13 13:16:46]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213131646-48a48720.txt, $representative_ext = 
+[2017-02-13 13:16:46]	[INFO]	Handling ././upload/2017/02/13/20170213131646-48a48720.txt got 
+[2017-02-13 13:17:31]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213131731-48a48720.txt, $representative_ext = 
+[2017-02-13 13:17:31]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213131731-48a48720.txt, $representative_ext = 
+[2017-02-13 13:17:31]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213131731-48a48720.txt, $representative_ext = 
+[2017-02-13 13:17:31]	[INFO]	Handling ././upload/2017/02/13/20170213131731-48a48720.txt got 
+[2017-02-13 13:17:31]	[INFO]	upload_file_pdf, $file_path = ././upload/2017/02/13/20170213131731-8f331182.txt, $representative_ext = 
+[2017-02-13 13:17:31]	[INFO]	upload_file_tiff, $file_path = ././upload/2017/02/13/20170213131731-8f331182.txt, $representative_ext = 
+[2017-02-13 13:17:31]	[INFO]	upload_file_video, $file_path = ././upload/2017/02/13/20170213131731-8f331182.txt, $representative_ext = 
+[2017-02-13 13:17:31]	[INFO]	Handling ././upload/2017/02/13/20170213131731-8f331182.txt got 

@@ -1,0 +1,4 @@
+File automatically created from SVN or Git repository.
+
+URL: https://github.com/Piwigo/LocalFilesEditor 
+Revision: fd21354a07b23f79b24f5618b70733e7119b72a7 (Fri Nov 11 05:54:01 2016 +0100)
