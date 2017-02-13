@@ -1,0 +1,16 @@
+{
+    "require": {
+        "behat/behat": "~2.5",
+        "php": "^5.4|^7.0",
+        "phpunit/phpunit": "~4.3",
+        "ext-intl": "*"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "autoload": {
+        "classmap": [
+            "vendor/"
+        ]
+    }
+}
