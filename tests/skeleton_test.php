@@ -1,6 +1,6 @@
 <?php
 
-include_once 'src/plugins/skeleton_deprecated/calculator.class.php';
+include_once 'tests/calculator.class.php';
 
 class SkeletonTest extends PHPUnit_Framework_TestCase
 {

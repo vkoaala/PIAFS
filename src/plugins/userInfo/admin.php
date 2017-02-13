@@ -15,9 +15,9 @@ $template -> set_filenames(
 
 // template vars
 $template->assign(array(
-  'SKELETON_PATH'=> SKELETON_PATH, // used for images, scripts, ... access
-  'SKELETON_ABS_PATH'=> realpath(SKELETON_PATH), // used for template inclusion (Smarty needs a real path)
-  'SKELETON_ADMIN' => SKELETON_ADMIN,
+  'USER_INFO_PATH'=> USER_INFO_PATH, // used for images, scripts, ... access
+  'USER_INFO_ABS_PATH'=> realpath(USER_INFO_PATH), // used for template inclusion (Smarty needs a real path)
+  'USER_INFO_ADMIN' => USER_INFO_PATH,
 ));
 
 //Assign the template contents to ADMIN_CONTENT

@@ -8,7 +8,7 @@
 
 <!-- Show the title of the plugin -->
 <div class="titlePage">
- <h2>{'Skeleton plugin'|@translate}</h2>
+ <h2>{'User info form plugin'|@translate}</h2>
 </div>
 
 <!-- Show content in a nice box -->
