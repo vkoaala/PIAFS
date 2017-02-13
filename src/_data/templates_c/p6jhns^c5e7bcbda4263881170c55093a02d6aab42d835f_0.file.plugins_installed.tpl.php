@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-13 11:03:14
+/* Smarty version 3.1.29, created on 2017-02-13 11:19:05
   from "/var/www/html/PIAFS/src/admin/themes/default/template/plugins_installed.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58a1d8c213e987_50670732',
+  'unifunc' => 'content_58a1dc79469815_98018268',
   'file_dependency' => 
   array (
     'c5e7bcbda4263881170c55093a02d6aab42d835f' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58a1d8c213e987_50670732 ($_smarty_tpl) {
+function content_58a1dc79469815_98018268 ($_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/var/www/html/PIAFS/src/include/smarty/libs/plugins/function.counter.php';
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'jquery.ajaxmanager','load'=>'footer','require'=>'jquery','path'=>'themes/default/js/plugins/jquery.ajaxmanager.js'),$_smarty_tpl);?>
 

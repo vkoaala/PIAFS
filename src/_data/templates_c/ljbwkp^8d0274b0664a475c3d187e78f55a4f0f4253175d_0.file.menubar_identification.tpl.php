@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-13 11:03:19
+/* Smarty version 3.1.29, created on 2017-02-13 11:19:06
   from "/var/www/html/PIAFS/src/themes/default/template/menubar_identification.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58a1d8c76f4406_05109445',
+  'unifunc' => 'content_58a1dc7adfa8a1_59366561',
   'file_dependency' => 
   array (
     '8d0274b0664a475c3d187e78f55a4f0f4253175d' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58a1d8c76f4406_05109445 ($_smarty_tpl) {
+function content_58a1dc7adfa8a1_59366561 ($_smarty_tpl) {
 ?>
 <dt><?php echo l10n('Identification');?>
 </dt>
