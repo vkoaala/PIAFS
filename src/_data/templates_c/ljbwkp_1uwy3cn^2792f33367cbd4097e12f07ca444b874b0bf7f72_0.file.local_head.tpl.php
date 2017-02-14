@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-13 12:06:53
+/* Smarty version 3.1.29, created on 2017-02-14 10:42:52
   from "/var/www/html/PIAFS/src/themes/elegant/local_head.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58a1e7ad198399_35007210',
+  'unifunc' => 'content_58a3257c4213b3_41012231',
   'file_dependency' => 
   array (
     '2792f33367cbd4097e12f07ca444b874b0bf7f72' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58a1e7ad198399_35007210 ($_smarty_tpl) {
+function content_58a3257c4213b3_41012231 ($_smarty_tpl) {
 $_smarty_tpl->smarty->_cache['tag_stack'][] = array('footer_script', array()); $_block_repeat=true; echo $_smarty_tpl->smarty->registered_plugins['block']['footer_script'][0][0]->block_footer_script(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
   var p_main_menu = "<?php echo $_smarty_tpl->tpl_vars['elegant']->value['p_main_menu'];?>

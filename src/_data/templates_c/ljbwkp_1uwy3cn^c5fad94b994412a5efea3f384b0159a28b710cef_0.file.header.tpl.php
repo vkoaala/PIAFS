@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-13 12:06:53
+/* Smarty version 3.1.29, created on 2017-02-14 10:42:52
   from "/var/www/html/PIAFS/src/themes/default/template/header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58a1e7ad18e6e3_89590695',
+  'unifunc' => 'content_58a3257c417e17_89791444',
   'file_dependency' => 
   array (
     'c5fad94b994412a5efea3f384b0159a28b710cef' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58a1e7ad18e6e3_89590695 ($_smarty_tpl) {
+function content_58a3257c417e17_89791444 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_replace')) require_once '/var/www/html/PIAFS/src/include/smarty/libs/plugins/modifier.replace.php';
 ?>
 <!DOCTYPE html>
