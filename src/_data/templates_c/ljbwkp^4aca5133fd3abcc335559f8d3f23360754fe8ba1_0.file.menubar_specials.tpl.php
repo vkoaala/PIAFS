@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-14 10:42:52
+/* Smarty version 3.1.29, created on 2017-02-14 12:02:21
   from "/var/www/html/PIAFS/src/themes/default/template/menubar_specials.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58a3257c3ccef4_03182809',
+  'unifunc' => 'content_58a3381da5af52_96318134',
   'file_dependency' => 
   array (
     '4aca5133fd3abcc335559f8d3f23360754fe8ba1' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58a3257c3ccef4_03182809 ($_smarty_tpl) {
+function content_58a3381da5af52_96318134 ($_smarty_tpl) {
 ?>
 <dt><?php echo l10n('Specials');?>
 </dt>
