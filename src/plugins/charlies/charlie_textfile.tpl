@@ -8,7 +8,7 @@
 <param name="pagemode" value="none">
 <param name="transparent" value="true">
 <embed src="{$SRC_IMG}" type="text/plain" toolbar="false" scrollbar="true" pagemode="none" transparent="true" width="98%" height=750px >
-<NOEMBED> Your browser does not support embedded txt files. </NOEMBED>
+<NOEMBED> Your browser does not support embedded .txt files. </NOEMBED>
 </embed></object>
 </div>
 {html_head}

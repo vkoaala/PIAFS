@@ -34,8 +34,12 @@ SELECT *
 ;';
 $picture = pwg_db_fetch_assoc(pwg_query($query));
 
-
 # DO SOME STUFF HERE... or not !
+//print_r(array_values($picture));
+$results = array_values($picture);
+$path = $results[15];
+
+echo $path;
 
 
 /* Template */

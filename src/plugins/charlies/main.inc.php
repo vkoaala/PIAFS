@@ -98,6 +98,9 @@ if (!isset($charlie['version']) or  $charlie['version'] != CHARLIES_VER)
 	if (!isset($charlie['Archive'])) 		$charlie['Archive'] = array('zip','rar',);
 	if (!isset($charlie['GPS'])) 			$charlie['GPS'] = array('gpx',);
   if (!isset($charlie['TextFile'])) 			$charlie['TextFile'] = array('txt',);
+  if (!isset($charlie['DocxFile'])) 			$charlie['DocxFile'] = array('docx',);
+  if (!isset($charlie['odt'])) 			$charlie['odt'] = array('odt',);
+
 	$charlie['version'] = CHARLIES_VER;
 
 	$dir = PHPWG_ROOT_PATH.PWG_LOCAL_DIR.'/plugins/';
