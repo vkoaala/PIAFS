@@ -59,20 +59,14 @@ class userInfo_maintain extends PluginMaintain
 
     // add a new table
     pwg_query('
-CREATE TABLE IF NOT EXISTS `'. $this->table .'` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `firstName` varchar(64) DEFAULT NULL,
-  `lastName` varchar(64) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8
-;');
-
-    // add a new column to existing table
-    $result = pwg_query('SHOW COLUMNS FROM `'.IMAGES_TABLE.'` LIKE "userInfo";');
-    if (!pwg_db_num_rows($result))
-    {
-      pwg_query('ALTER TABLE `' . IMAGES_TABLE . '` ADD `users_info` TINYINT(1) NOT NULL DEFAULT 0;');
-    }
+    CREATE TABLE IF NOT EXISTS `'. $this->table .'` (
+      `id` int(11) unsigned NOT NULL,
+      `firstName` varchar(64) DEFAULT NULL,
+      `lastName` varchar(64) DEFAULT NULL,
+      PRIMARY KEY (`id`),
+      FOREIGN KEY (`id`) REFERENCES piwigo_users(`id`) 
+    ) ENGINE=MyISAM DEFAULT CHARSET=utf8
+    ;');
 
     // create a local directory
     if (!file_exists($this->dir))
@@ -127,9 +121,6 @@ CREATE TABLE IF NOT EXISTS `'. $this->table .'` (
 
     // delete table
     pwg_query('DROP TABLE `'. $this->table .'`;');
-
-    // delete field
-    pwg_query('ALTER TABLE `'. IMAGES_TABLE .'` DROP `users_info`;');
 
     // delete local folder
     // use a recursive function if you plan to have nested directories

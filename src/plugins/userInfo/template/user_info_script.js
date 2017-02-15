@@ -10,8 +10,8 @@ function sendUserInfo(){
     complete: function (response) {
       console.log(JSON.stringify(response));
     },
-    error: function () {
-      console.log("not cool");
+    error: function (response) {
+      console.log(response);
     }
   });
 }

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-14 12:02:21
+/* Smarty version 3.1.29, created on 2017-02-14 13:24:43
   from "/var/www/html/PIAFS/src/themes/default/local_head.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58a3381daccba8_05864429',
+  'unifunc' => 'content_58a34b6b337c45_70057666',
   'file_dependency' => 
   array (
     'aa92c992afb41328582cbf3565f86a0917fc6600' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58a3381daccba8_05864429 ($_smarty_tpl) {
+function content_58a34b6b337c45_70057666 ($_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['load_css']->value) {?> 
 	<!--[if lt IE 7]>
 		<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['ROOT_URL']->value;?>
