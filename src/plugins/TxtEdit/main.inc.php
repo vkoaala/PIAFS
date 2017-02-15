@@ -12,18 +12,40 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 // Define the path to our plugin.
 define('TXTEDIT_PATH', PHPWG_PLUGINS_PATH.basename(dirname(__FILE__)).'/');
 
-// Hook on to an event to show the administration page.
-add_event_handler('get_admin_plugin_menu_links', 'txtedit_admin_menu');
+add_event_handler('loc_end_picture', 'txtedit_end_picture');
 
-// Add an entry to the 'Plugins' menu.
-function txtedit_admin_menu($menu) {
- array_push(
-   $menu,
-   array(
-     'NAME'  => 'TxtEdit',
-     'URL'   => get_admin_plugin_menu_link(dirname(__FILE__)).'/admin.php'
-   )
- );
- return $menu;
+function txtedit_end_picture()
+{
+  global $template, $picture;
+
+  $extension = strtolower(get_extension($picture['current']['file']));
+  $txt = "jpg";
+  if (strcmp($extension, $txt) == 0){
+    $template->set_prefilter('picture', 'txtedit_picture_prefilter');
+
+    $template->assign(
+      array(
+        'IMAGE_ID' => $picture['current']['id'],
+        )
+      );
+  }
+  else{
+    echo 'fail';
+  }
+}
+
+function txtedit_picture_prefilter($content, &$smarty)
+{
+  $search = '{if isset($PLUGIN_PICTURE_ACTIONS)';
+
+  $replace = '
+    <a id="cmdEditPhoto" href="" class="pwg-state-default pwg-button" rel="nofollow">
+      EDIT
+    </a>
+'.$search;
+
+  $content = str_replace($search, $replace, $content);
+
+  return $content;
 }
 ?>
