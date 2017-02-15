@@ -8,7 +8,7 @@
     <legend>{'File editor'|translate}</legend>
 
     <p>
-    <textarea name="description" id="description" class="description" style="overflow-y: hidden; height: 78px;"></textarea>
+    <textarea name="description" id="description" class="description" style="overflow-y: hidden; height: 78px;">{$TXT}</textarea>
     </p>
 
     <p>

@@ -35,11 +35,13 @@ SELECT *
 $picture = pwg_db_fetch_assoc(pwg_query($query));
 
 # DO SOME STUFF HERE... or not !
-//print_r(array_values($picture));
 $results = array_values($picture);
+
 $path = $results[15];
 
-echo $path;
+$handle = fopen($path, "r+");
+$contents = fread($handle, filesize($path));
+fclose($handle);
 
 
 /* Template */
@@ -48,6 +50,7 @@ $template->assign(array(
   'skeleton' => $conf['skeleton'],
   'TITLE' => render_element_name($picture),
   'TN_SRC' => DerivativeImage::thumb_url($picture),
+  'TXT' => $contents
 ));
 
 $template->set_filename('skeleton_content', realpath(SKELETON_PATH . 'admin/template/photo.tpl'));
