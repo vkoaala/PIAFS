@@ -8,12 +8,12 @@
   <form method="POST">
     <div>
       <label> {'First Name'|translate}: </label>
-      <input type="text" name="fname" id="fname"/>
+      <input type="text" name="fname" id="fname" value="{$USER_FNAME}"/>
     </div>
     <br>
     <div>
       <label> {'Last Name'|translate}: </label>
-      <input type="text" name="lname" id="lname"/>
+      <input type="text" name="lname" id="lname" value="{$USER_LNAME}"/>
     </div>
     <br>
     <button onclick="sendUserInfo()"> {'Save'|translate} </button>
