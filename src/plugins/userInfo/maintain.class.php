@@ -68,6 +68,9 @@ class userInfo_maintain extends PluginMaintain
     ) ENGINE=MyISAM DEFAULT CHARSET=utf8
     ;');
 
+    // add a new section to piwigo history
+    pwg_query('ALTER TABLE '. piwigo_history .' CHANGE section section ENUM(\'categories\',\'tags\',\'search\',\'list\',\'favorites\',\'most_visited\',\'best_rated\',\'recent_pics\',\'recent_cats\',\'user_info\',\'add_photos\');');
+
     // create a local directory
     if (!file_exists($this->dir))
     {

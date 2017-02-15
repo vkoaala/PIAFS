@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-15 12:54:57
+/* Smarty version 3.1.29, created on 2017-02-15 14:19:02
   from "/var/www/html/PIAFS/src/admin/themes/default/template/admin.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58a495f11611d9_05564042',
+  'unifunc' => 'content_58a4a9a61ad1e3_79676896',
   'file_dependency' => 
   array (
     '0ac8cb04ef6e4f5ef243578a59116cb7bd959cd4' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58a495f11611d9_05564042 ($_smarty_tpl) {
+function content_58a4a9a61ad1e3_79676896 ($_smarty_tpl) {
 $_smarty_tpl->smarty->_cache['tag_stack'][] = array('footer_script', array()); $_block_repeat=true; echo $_smarty_tpl->smarty->registered_plugins['block']['footer_script'][0][0]->block_footer_script(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
 jQuery.fn.lightAccordion = function(options) {
