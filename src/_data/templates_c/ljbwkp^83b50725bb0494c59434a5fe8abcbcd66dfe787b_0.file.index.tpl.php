@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-14 13:24:43
+/* Smarty version 3.1.29, created on 2017-02-15 12:55:00
   from "/var/www/html/PIAFS/src/themes/default/template/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58a34b6b389735_54638620',
+  'unifunc' => 'content_58a495f4f353a2_93450599',
   'file_dependency' => 
   array (
     '83b50725bb0494c59434a5fe8abcbcd66dfe787b' => 
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:infos_errors.tpl' => 1,
   ),
 ),false)) {
-function content_58a34b6b389735_54638620 ($_smarty_tpl) {
+function content_58a495f4f353a2_93450599 ($_smarty_tpl) {
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'core.switchbox','load'=>'async','require'=>'jquery','path'=>'themes/default/js/switchbox.js'),$_smarty_tpl);?>
 
 <?php echo $_smarty_tpl->tpl_vars['MENUBAR']->value;?>

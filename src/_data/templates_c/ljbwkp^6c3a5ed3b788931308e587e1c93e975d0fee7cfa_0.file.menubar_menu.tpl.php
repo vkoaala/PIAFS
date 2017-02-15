@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-14 13:24:43
+/* Smarty version 3.1.29, created on 2017-02-15 12:55:00
   from "/var/www/html/PIAFS/src/themes/default/template/menubar_menu.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58a34b6b2cc9e8_11327168',
+  'unifunc' => 'content_58a495f4e8f4d4_63589323',
   'file_dependency' => 
   array (
     '6c3a5ed3b788931308e587e1c93e975d0fee7cfa' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58a34b6b2cc9e8_11327168 ($_smarty_tpl) {
+function content_58a495f4e8f4d4_63589323 ($_smarty_tpl) {
 ?>
 <dt><?php echo l10n('Menu');?>
 </dt>
