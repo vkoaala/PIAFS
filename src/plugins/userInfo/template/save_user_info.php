@@ -20,8 +20,15 @@ foreach($_POST as $key => $value){
 
 //check if all POST values are valid
 if($userInfo->AreValid($items)){
+
   //insert if everything is valid
-  $userInfo->insertInto($user['id'], $_POST["fname"], $_POST["lname"]);
+  if(!($userInfo->userInfoExists($user['id']))){
+    $userInfo->insertInto($user['id'], $_POST["fname"], $_POST["lname"]);
+  }
+  else{
+    $userInfo->modifyInfo($user['id'], $_POST["fname"], $_POST["lname"]);
+  }
+  
 }
 
 ?>
