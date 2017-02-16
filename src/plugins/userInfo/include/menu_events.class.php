@@ -1,7 +1,7 @@
 <?php
-defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
+defined('USER_INFO_PATH') or die('Hacking attempt!');
 
-class UserInfoMenu
+class UserInfoMenuEvents
 {
   /**
   * add link in existing menu
@@ -21,4 +21,17 @@ class UserInfoMenu
       }
     }
   }
+
+  //Add an entry to the 'Plugins' ,emu.
+  static function user_info_admin_menu($menu){
+    array_push(
+      $menu,
+      array(
+        'NAME' => 'User info',
+        'URL' => get_admin_plugin_menu_link(USER_INFO_PATH).'/admin.php'
+      )
+    );
+    return $menu;
+  }
+
 }

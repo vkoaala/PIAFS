@@ -23,14 +23,20 @@ define('USER_INFO_PUBLIC',  get_absolute_root_url() . make_index_url(array('sect
 
 add_event_handler('init', 'user_info_init');
 
+function user_info_init()
+{
+  // load plugin language file
+  load_language('plugin.lang', USER_INFO_PATH);
+}
+
 if(!defined('IN_ADMIN')){
   // file containing all public handlers functions
-  $public_file = USER_INFO_PATH . 'include/public_events.inc.php';
+  $public_file = USER_INFO_PATH . 'include/public_events.class.php';
 
   // add a public section
-  add_event_handler('loc_end_section_init', 'user_info_loc_end_section_init',
+  add_event_handler('loc_end_section_init', array('UserInfoPublicEvents', 'user_info_loc_end_section_init'),
   EVENT_HANDLER_PRIORITY_NEUTRAL, $public_file);
-  add_event_handler('loc_end_index', 'user_info_loc_end_page',
+  add_event_handler('loc_end_index', array('UserInfoPublicEvents', 'user_info_loc_end_page'),
   EVENT_HANDLER_PRIORITY_NEUTRAL, $public_file);
 }
 
@@ -38,30 +44,11 @@ if(!defined('IN_ADMIN')){
 $menu_file = USER_INFO_PATH . 'include/menu_events.class.php';
 
 // add item to existing menu (EVENT_HANDLER_PRIORITY_NEUTRAL+10 is for compatibility with Advanced Menu Manager plugin)
-add_event_handler('blockmanager_apply', array('UserInfoMenu', 'blockmanager_apply1'),
+add_event_handler('blockmanager_apply', array('UserInfoMenuEvents', 'blockmanager_apply1'),
 EVENT_HANDLER_PRIORITY_NEUTRAL+10, $menu_file);
 
 //Hook on to an event to show the administration page.
-add_event_handler('get_admin_plugin_menu_links', 'user_info_admin_menu');
-
-//Add an entry to the 'Plugins' ,emu.
-function user_info_admin_menu($menu){
-  array_push(
-    $menu,
-    array(
-      'NAME' => 'user_info',
-      'URL' => get_admin_plugin_menu_link(dirname(__FILE__)).'/admin.php'
-    )
-  );
-  return $menu;
-}
-
-function user_info_init()
-{
-  global $conf;
-
-  // load plugin language file
-  load_language('plugin.lang', USER_INFO_PATH);
-}
+add_event_handler('get_admin_plugin_menu_links', array('UserInfoMenuEvents', 'user_info_admin_menu'),
+EVENT_HANDLER_PRIORITY_NEUTRAL+10, $menu_file);
 
 ?>

@@ -8,12 +8,6 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
  */
 class userInfo_maintain extends PluginMaintain
 {
-  private $default_conf = array(
-    'option1' => 10,
-    'option2' => true,
-    'option3' => 'two',
-    );
-
   private $table;
   private $dir;
 
@@ -97,8 +91,6 @@ class userInfo_maintain extends PluginMaintain
    */
   function update($old_version, $new_version, &$errors=array())
   {
-    // I (mistic100) chosed to handle install and update in the same method
-    // you are free to do otherwize
     $this->install($new_version, $errors);
   }
 
