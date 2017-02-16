@@ -25,6 +25,7 @@ class userInfo_maintain extends PluginMaintain
 
     // Class members can't be declared with computed values so initialization is done here
     $this->table = $prefixeTable . 'users_info';
+    $this->historyTable = $prefixeTable . 'history';
     $this->dir = PHPWG_ROOT_PATH . PWG_LOCAL_DIR . 'userInfo/';
   }
 
@@ -36,41 +37,31 @@ class userInfo_maintain extends PluginMaintain
    */
   function install($plugin_version, &$errors=array())
   {
-    global $conf;
+    $this->addPluginTable();
 
-    // add config parameter
-    if (empty($conf['userInfo']))
-    {
-      // conf_update_param well serialize and escape array before database insertion
-      // the third parameter indicates to update $conf['userInfo'] global variable as well
-      conf_update_param('userInfo', $this->default_conf, true);
-    }
-    else
-    {
-      $old_conf = safe_unserialize($conf['userInfo']);
+    $this->alterHistoryTable();
+  
+    $this->createLocalDirectory();
+  }
 
-      if (empty($old_conf['option3']))
-      { // use case: this parameter was added in a new version
-        $old_conf['option3'] = 'two';
-      }
-
-      conf_update_param('userInfo', $old_conf, true);
-    }
-
-    // add a new table
+  private function addPluginTable(){
     pwg_query('
     CREATE TABLE IF NOT EXISTS `'. $this->table .'` (
       `id` int(11) unsigned NOT NULL,
       `firstName` varchar(64) DEFAULT NULL,
       `lastName` varchar(64) DEFAULT NULL,
       PRIMARY KEY (`id`),
-      FOREIGN KEY (`id`) REFERENCES piwigo_users(`id`) 
+      FOREIGN KEY (`id`) REFERENCES '.$this->table.' (`id`) 
     ) ENGINE=MyISAM DEFAULT CHARSET=utf8
     ;');
+  }
 
+  private function alterHistoryTable(){
     // add a new section to piwigo history
-    pwg_query('ALTER TABLE '. piwigo_history .' CHANGE section section ENUM(\'categories\',\'tags\',\'search\',\'list\',\'favorites\',\'most_visited\',\'best_rated\',\'recent_pics\',\'recent_cats\',\'user_info\',\'add_photos\');');
+    pwg_query('ALTER TABLE '. $this->historyTable .' CHANGE section section ENUM(\'categories\',\'tags\',\'search\',\'list\',\'favorites\',\'most_visited\',\'best_rated\',\'recent_pics\',\'recent_cats\',\'user_info\',\'add_photos\');');
+  }
 
+  private function createLocalDirectory(){
     // create a local directory
     if (!file_exists($this->dir))
     {
@@ -119,12 +110,17 @@ class userInfo_maintain extends PluginMaintain
    */
   function uninstall()
   {
-    // delete configuration
-    conf_delete_param('userInfo');
+    $this->dropPluginTable();
 
+    $this->deleteLocalFolder();
+  }
+
+  private function dropPluginTable(){
     // delete table
     pwg_query('DROP TABLE `'. $this->table .'`;');
+  }
 
+  private function deleteLocalFolder(){
     // delete local folder
     // use a recursive function if you plan to have nested directories
     foreach (scandir($this->dir) as $file)
