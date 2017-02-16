@@ -1,6 +1,6 @@
 {html_head}
-<link rel="stylesheet" type="text/css" href="{$USER_INFO_PATH|@cat:'template/user_info_style.css'}">
-<script type="text/javascript" src="{$USER_INFO_PATH|@cat:'template/user_info_script.js'}"> </script>
+<link rel="stylesheet" type="text/css" href="{$USER_INFO_PATH|@cat:'user_info_page/user_info_style.css'}">
+<script type="text/javascript" src="{$USER_INFO_PATH|@cat:'user_info_page/user_info_script.js'}"> </script>
 {/html_head}
 
 <h1>{'Test'|translate}</h1>

@@ -33,7 +33,7 @@ class UserInfoPublicEvents
 
     if (isset($page['section']) and $page['section']=='user_info')
     {
-      include(USER_INFO_PATH . 'include/user_info_page.inc.php');
+      include(USER_INFO_PATH . 'user_info_page/user_info_page.inc.php');
     }
   }
 

@@ -41,7 +41,7 @@ class user_info_db
         return true;
     }
 
-    function insertInto($id, $firstName, $lastName){
+    function insertInfo($id, $firstName, $lastName){
         $query = '
         INSERT INTO piwigo_users_info(id,firstName,lastName) 
         VALUES (\''.$id.'\', \''.$firstName.'\', \''.$lastName.'\')

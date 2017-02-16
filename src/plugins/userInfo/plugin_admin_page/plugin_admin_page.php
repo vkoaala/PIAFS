@@ -9,7 +9,7 @@ global $template;
 #$smarty->assign('Name', 'Fred');
 $template -> set_filenames(
   array(
-    'plugin_admin_content' => dirname(__FILE__).'/admin.tpl'
+    'plugin_admin_content' => dirname(__FILE__).'/plugin_admin_page.tpl'
   )
 );
 

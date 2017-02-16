@@ -1,7 +1,9 @@
+
+
 function sendUserInfo(){
   jQuery.ajax({
     type: "POST",
-    url: 'plugins/userInfo/template/save_user_info.php',
+    url: 'plugins/userInfo/user_info_page/user_info_modify.php',
     datatype: "json",
     data: {
       fname: $('#fname').val(),
