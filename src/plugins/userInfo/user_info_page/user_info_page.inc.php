@@ -1,7 +1,7 @@
 <?php
 defined('USER_INFO_PATH') or die('Hacking attempt!');
 
-global $page, $template, $conf, $user, $tokens, $pwg_loaded_plugins;
+global $page, $template, $conf, $user, $tokens, $pwg_loaded_plugins, $prefixeTable;
 
 
 $result = getUserInfo();
@@ -15,11 +15,11 @@ if(!empty($result)){
 
 function getUserInfo(){
   
-  global $user;
+  global $user, $prefixeTable;
 
   $query = '
     SELECT * 
-    FROM piwigo_users_info 
+    FROM '. $prefixeTable.'users_info 
     WHERE id = '. $user['id'] .'';
   return pwg_db_fetch_assoc(pwg_query($query));
 }

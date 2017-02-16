@@ -23,7 +23,7 @@ if($userInfo->AreValid($items)){
 
   //insert if everything is valid
   if(!($userInfo->userInfoExists($user['id']))){
-    $userInfo->insertInto($user['id'], $_POST["fname"], $_POST["lname"]);
+    $userInfo->insertInfo($user['id'], $_POST["fname"], $_POST["lname"]);
   }
   else{
     $userInfo->modifyInfo($user['id'], $_POST["fname"], $_POST["lname"]);

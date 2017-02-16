@@ -28,7 +28,7 @@ class UserInfoMenuEvents
       $menu,
       array(
         'NAME' => 'User info',
-        'URL' => get_admin_plugin_menu_link(USER_INFO_PATH).'/plugin_admin_page/plugin_admin_page.php'
+        'URL' => get_admin_plugin_menu_link(USER_INFO_PATH).'/plugin_admin_page/plugin_admin_page.inc.php'
       )
     );
     return $menu;

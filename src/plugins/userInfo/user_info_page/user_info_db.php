@@ -4,9 +4,13 @@
 class user_info_db
 {
 
+    private $table;
+
     function __construct()
     {
+        global $prefixeTable;
 
+        $this->table = $prefixeTable . 'users_info';
     }
 
     function areValid($toValidate){
@@ -31,7 +35,7 @@ class user_info_db
     function userInfoExists($id){
         $query = '
             SELECT * 
-            FROM piwigo_users_info 
+            FROM '.$this->table.' 
             WHERE id = '. $id .'';
         $result = pwg_db_fetch_assoc(pwg_query($query));
 
@@ -43,7 +47,7 @@ class user_info_db
 
     function insertInfo($id, $firstName, $lastName){
         $query = '
-        INSERT INTO piwigo_users_info(id,firstName,lastName) 
+        INSERT INTO '. $this->table.'(id,firstName,lastName) 
         VALUES (\''.$id.'\', \''.$firstName.'\', \''.$lastName.'\')
         ;';
         pwg_query($query);
@@ -51,7 +55,7 @@ class user_info_db
 
     function modifyInfo($id, $firstName, $lastName){
         $query = '
-            UPDATE piwigo_users_info
+            UPDATE '.$this->table.'
             SET firstName = "'.$firstName.'",
                 lastName = "'.$lastName.'"
             WHERE id ='.$id.'
