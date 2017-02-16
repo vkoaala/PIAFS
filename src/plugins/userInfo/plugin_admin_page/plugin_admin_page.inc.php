@@ -3,6 +3,31 @@
 //Check whether we are indeed included by Piwigo
 if(!defined('PHPWG_ROOT_PATH')) die ('Hacking attempt!');
 
+/*$tables = getTablesInfo();
+
+function getTablesInfo(){
+
+  $query = '
+    SELECT `COLUMN_NAME` 
+    FROM `INFORMATION_SCHEMA`.`COLUMNS` 
+    WHERE `TABLE_SCHEMA`= "piwigo" 
+      AND `TABLE_NAME`= "piwigo_users_info"
+    ';
+  $query = '
+    SHOW columns
+    FROM piwigo_users_info
+    ';
+  //$query= 'DESCRIBE piwigo_users_info';
+  return pwg_query($query);
+}echo $item;echo $item;
+
+foreach($tables as $item){
+  foreach($item as $test){
+    echo $test;
+    echo " ";
+  }
+}*/
+
 //Fetch the template.
 global $template;
 

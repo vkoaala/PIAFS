@@ -1,5 +1,3 @@
-
-
 function sendUserInfo(){
   jQuery.ajax({
     type: "POST",
