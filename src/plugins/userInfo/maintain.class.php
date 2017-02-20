@@ -19,6 +19,7 @@ class userInfo_maintain extends PluginMaintain
 
     // Class members can't be declared with computed values so initialization is done here
     $this->table = $prefixeTable . 'users_info';
+    $this->formElementTable = $prefixeTable . 'form_element';
     $this->historyTable = $prefixeTable . 'history';
     $this->dir = PHPWG_ROOT_PATH . PWG_LOCAL_DIR . 'userInfo/';
   }
@@ -33,6 +34,8 @@ class userInfo_maintain extends PluginMaintain
   {
     $this->addPluginTable();
 
+    $this->addFormElementTable();
+
     $this->alterHistoryTable();
   
     $this->createLocalDirectory();
@@ -44,10 +47,19 @@ class userInfo_maintain extends PluginMaintain
       `id` int(11) unsigned NOT NULL,
       `firstName` varchar(64) DEFAULT NULL,
       `lastName` varchar(64) DEFAULT NULL,
-      PRIMARY KEY (`id`),
-      FOREIGN KEY (`id`) REFERENCES '.$this->table.' (`id`) 
+      PRIMARY KEY (`id`)
     ) ENGINE=MyISAM DEFAULT CHARSET=utf8
     ;');
+  }
+
+  private function addFormElementTable(){
+    pwg_query("
+    CREATE TABLE IF NOT EXISTS `". $this->formElementTable ."` (
+      form_element_name varchar(64) NOT NULL default '',
+      form_element_type varchar(64) DEFAULT NULL,
+      PRIMARY KEY (`form_element_name`)
+    ) ENGINE=MyISAM DEFAULT CHARSET=utf8
+    ;");
   }
 
   private function alterHistoryTable(){
@@ -104,12 +116,19 @@ class userInfo_maintain extends PluginMaintain
   {
     $this->dropPluginTable();
 
+    $this->dropFormElementTable();
+
     $this->deleteLocalFolder();
   }
 
   private function dropPluginTable(){
     // delete table
     pwg_query('DROP TABLE `'. $this->table .'`;');
+  }
+
+  private function dropFormElementTable(){
+        // delete table
+    pwg_query('DROP TABLE `'. $this->formElementTable .'`;');
   }
 
   private function deleteLocalFolder(){

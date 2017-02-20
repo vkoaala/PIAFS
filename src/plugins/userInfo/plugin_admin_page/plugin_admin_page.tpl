@@ -1,5 +1,6 @@
 {html_head}
 <link rel="stylesheet" type="text/css" href="{$USER_INFO_PATH|@cat:'plugin_admin_page/plugin_admin_style.css'}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <script type="text/javascript" src="{$USER_INFO_PATH|@cat:'plugin_admin_page/plugin_admin_script.js'}"> </script>
 {/html_head}
 
@@ -10,10 +11,40 @@
 
 <!-- Show content in a nice box -->
 <fieldset>
- <legend>{'A minimal plugin'|@translate}</legend>
-
- {'Hello world!'|@translate}
+ <legend>{'List of the elements in the form'|@translate}</legend>
 </fieldset>
+<div>
+  <table border="1">
+    <tr>
+      <th> {"Form element name"|translate} </th>
+      <th> {"Form element type"|translate} </th>
+    </tr>
+    {foreach from=$FORM_ELEMENTS item=row}
+        <tr>
+          {foreach from=$row item=column}
+            <td> {$column} </td>
+          {/foreach}
+          <td> <a onclick="deleteFormElement()" > <i class="material-icons" > delete </i> </a> </td>
+          <td> <a onclick="modifyFormElement()" > <i class="material-icons"> edit </i> </a> </td>
+        </tr>
+    {/foreach}
+  </table>
+</div>
+<br>
 <form method="POST">
-  <button onclick="getUsersInfo()"> {'Fetch user info'|translate} </button>
+  <label> {"Add new element to your form"|translate}: </label>
+  <div>
+    <label> {"New element name"|translate}: </label>
+    <input type="text" id="form_element_name" />
+  <div>
+  <div>
+    <label> {"New element type"|translate}: </label>
+    <select id="form_element_type">
+      <option value="text"> {"Text"|translate} </option>
+      <option value="number"> {"Number"|translate} </option>
+      <option value="checkbox"> {"Checkbox"|translate} </option>
+      <option value="radio_button"> {"Radio Button"|translate} </option>
+    </select>
+  </div>
+  <button onclick="addFormElement()"> {'Add'|translate} </button>
 </form>
