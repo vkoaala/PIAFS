@@ -26,10 +26,28 @@ class form_element_db
         return $form_elements;
     }
 
+    function deleteFormElement($form_element_name){
+        $query = '
+            DELETE FROM '.$this->form_element_table.'
+            WHERE form_element_name = \''.$form_element_name.'\'
+            ';
+        return pwg_query($query);
+    }
+
+    function modifyFormElement($form_element_previous_name, $form_element_name, $form_element_type){
+        $query = '
+            UPDATE '.$this->form_element_table.'
+                SET form_element_name = '.$form_element_name.',
+                    form_element_type = '.$form_element_type.'
+                WHERE form_element_name = '.$form_element_previous_name.'
+            ';
+        return pwg_query($query);
+    }
+
     function getAllFormElements(){
         $query = '
             SELECT * 
-            FROM piwigo_form_element';
+            FROM '.$this->form_element_table.'';
         return pwg_query($query);
     }
 
