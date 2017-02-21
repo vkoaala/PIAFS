@@ -3,8 +3,9 @@
 <script type="text/javascript" src="{$USER_INFO_PATH|@cat:'user_info_page/user_info_script.js'}"> </script>
 {/html_head}
 
-<h1>{'Test'|translate}</h1>
+<h1>{'User information'|translate}</h1>
 <div id="userInfoForm">
+  <form class="userInfo">
     {foreach from=$FORM_ELEMENTS item=row}
         <div>
           <label> {$row[0]}: </label>
