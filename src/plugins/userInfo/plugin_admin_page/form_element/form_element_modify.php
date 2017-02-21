@@ -8,8 +8,15 @@ include_once(PHPWG_ROOT_PATH.'include/common.inc.php');
 include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 include_once(PHPWG_ROOT_PATH.'admin/include/functions_upload.inc.php');
 
-$form_element_db = new form_element_db();
+$items = [];
+foreach($_POST as $key => $value){
+  $items[] = $value;
+}
 
-$form_element_db->modifyFormElement($_POST["form_element_previous_name"], $_POST["form_element_name"], $_POST["form_element_type"]);
+if(PostValidation::areValid($items)){
+    $form_element_db = new form_element_db();
+    $form_element_db->modifyFormElement($_POST["form_element_previous_name"], $_POST["form_element_name"], $_POST["form_element_type"]);
+}
+
 
 ?>

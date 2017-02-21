@@ -14,18 +14,6 @@ class form_element_db
         $this->form_element_table = $prefixeTable . 'form_element';
     }
 
-    function makeArrayOfFormElements($queryResult){
-        $form_elements = array();
-        foreach($queryResult as $queryRow){
-            $array_to_push = array();
-            foreach($queryRow as $queryColumn){
-                array_push($array_to_push, $queryColumn);
-            }
-            array_push($form_elements, $array_to_push);
-        }
-        return $form_elements;
-    }
-
     function deleteFormElement($form_element_name){
         $query = '
             DELETE FROM '.$this->form_element_table.'
@@ -50,6 +38,18 @@ class form_element_db
             FROM '.$this->form_element_table.'';
         $queryResult = pwg_query($query);
         return $this->makeArrayOfFormElements($queryResult);
+    }
+
+    private function makeArrayOfFormElements($queryResult){
+        $form_elements = array();
+        foreach($queryResult as $queryRow){
+            $array_to_push = array();
+            foreach($queryRow as $queryColumn){
+                array_push($array_to_push, $queryColumn);
+            }
+            array_push($form_elements, $array_to_push);
+        }
+        return $form_elements;
     }
 
     function addFormElement($form_element_name, $form_element_type){

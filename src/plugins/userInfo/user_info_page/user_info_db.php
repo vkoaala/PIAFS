@@ -13,25 +13,6 @@ class user_info_db
         $this->table = $prefixeTable . 'users_info';
     }
 
-    function areValid($toValidate){
-        foreach($toValidate as $item){
-            if(!$this->isValid($item)){
-                return false;
-            }
-        }
-        return true;
-    }
-
-    function isValid($toValidate){
-        if(!isset($toValidate)){
-            return false;
-        }
-        if(empty($toValidate)){
-            return false;
-        }
-        return true;
-    }
-
     function userInfoExists($id){
         $query = '
             SELECT * 
