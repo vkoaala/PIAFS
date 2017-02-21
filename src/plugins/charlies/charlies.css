@@ -1,13 +1,17 @@
-#player 
+#player
 {
 	background-color: transparent;
 }
-#embedplayer 
+#embedplayer
 {
 	background-color: transparent;
 }
-#theImage { 
+#theImage {
 	padding-top:5px;
+}
+
+#embed {
+background-color: white;
 }
 #theImage #charlie {
 	margin:0px auto 5px auto;
@@ -72,13 +76,13 @@ a.xl.ui-state-active { border:0; color: #f1f1f1; background-image: none; backgro
 #theAdminPage  #pwgMain .Charlies *:active { outline: 0; }
 
 a.xl, #theAdminPage  #pwgMain .Charlies  input,
-#theAdminPage  #pwgMain .Charlies #main-options li, 
-#theAdminPage  #pwgMain .Charlies #main-options li a { 
-	border-radius: 8px; -moz-border-radius: 8px; -khtml-border-radius: 8px; -webkit-border-radius: 8px; 
+#theAdminPage  #pwgMain .Charlies #main-options li,
+#theAdminPage  #pwgMain .Charlies #main-options li a {
+	border-radius: 8px; -moz-border-radius: 8px; -khtml-border-radius: 8px; -webkit-border-radius: 8px;
 }
 #theAdminPage .Charlies fieldset,
 #theAdminPage .Charlies .checking {
-	border-radius: 16px; -moz-border-radius: 16px; -khtml-border-radius: 16px; -webkit-border-radius: 16px; 
+	border-radius: 16px; -moz-border-radius: 16px; -khtml-border-radius: 16px; -webkit-border-radius: 16px;
 }
 
 #theAdminPage  #pwgMain .Charlies  input {

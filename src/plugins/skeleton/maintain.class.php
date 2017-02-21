@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `'. $this->table .'` (
     $result = pwg_query('SHOW COLUMNS FROM `'.IMAGES_TABLE.'` LIKE "skeleton";');
     if (!pwg_db_num_rows($result))
     {
-      pwg_query('ALTER TABLE `' . IMAGES_TABLE . '` ADD `skeleton` TINYINT(1) NOT NULL DEFAULT 0;');
+      pwg_query('ALTER TABLE `' . IMAGES_TABLE . '` ADD `editText` TINYINT(1) NOT NULL DEFAULT 0;');
     }
 
     // create a local directory
