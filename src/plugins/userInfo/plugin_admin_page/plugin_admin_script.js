@@ -1,7 +1,7 @@
 function addFormElement(){
   jQuery.ajax({
     type: "POST",
-    url: 'plugins/userInfo/plugin_admin_page/form_element_add.php',
+    url: 'plugins/userInfo/plugin_admin_page/form_element/form_element_add.php',
     datatype: "json",
     data: {
       form_element_name: $('#form_element_name').val(),
@@ -19,7 +19,7 @@ function addFormElement(){
 function deleteFormElement(formElementName){
     jQuery.ajax({
     type: "POST",
-    url: 'plugins/userInfo/plugin_admin_page/form_element_delete.php',
+    url: 'plugins/userInfo/plugin_admin_page/form_element/form_element_delete.php',
     datatype: "json",
     data: {
       form_element_name: formElementName
@@ -33,10 +33,10 @@ function deleteFormElement(formElementName){
   });
 }
 
-function modifyFormElement(formElementName){
+function modifyFormElement(formElementPreviousName, formElementName, formElementType){
     jQuery.ajax({
     type: "POST",
-    url: 'plugins/userInfo/plugin_admin_page/form_element_modify.php',
+    url: 'plugins/userInfo/plugin_admin_page/form_element/form_element_modify.php',
     datatype: "json",
     data: {
       form_element_previous_name: formElementPreviousName,
@@ -50,4 +50,8 @@ function modifyFormElement(formElementName){
       console.log(response);
     }
   });
+}
+
+function editFormElement(){
+  
 }

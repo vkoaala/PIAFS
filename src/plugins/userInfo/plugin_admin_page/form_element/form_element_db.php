@@ -31,7 +31,7 @@ class form_element_db
             DELETE FROM '.$this->form_element_table.'
             WHERE form_element_name = \''.$form_element_name.'\'
             ';
-        return pwg_query($query);
+        pwg_query($query);
     }
 
     function modifyFormElement($form_element_previous_name, $form_element_name, $form_element_type){
@@ -41,14 +41,15 @@ class form_element_db
                     form_element_type = '.$form_element_type.'
                 WHERE form_element_name = '.$form_element_previous_name.'
             ';
-        return pwg_query($query);
+        pwg_query($query);
     }
 
     function getAllFormElements(){
         $query = '
             SELECT * 
             FROM '.$this->form_element_table.'';
-        return pwg_query($query);
+        $queryResult = pwg_query($query);
+        return $this->makeArrayOfFormElements($queryResult);
     }
 
     function addFormElement($form_element_name, $form_element_type){

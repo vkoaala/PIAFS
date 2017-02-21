@@ -25,7 +25,7 @@
             <td> {$column} </td>
           {/foreach}
           <td> <a onclick="deleteFormElement( '{$row[0]}' )" > <i class="material-icons" > delete </i> </a> </td>
-          <td> <a onclick="modifyFormElement( '{$row[0]}' )" > <i class="material-icons" > edit </i> </a> </td>
+          <!-- <td> <a onclick="editFormElement()" > <i class="material-icons" > edit </i> </a> </td> -->
         </tr>
     {/foreach}
   </table>

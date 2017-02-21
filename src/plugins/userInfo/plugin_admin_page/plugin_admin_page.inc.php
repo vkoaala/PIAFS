@@ -3,16 +3,14 @@
 //Check whether we are indeed included by Piwigo
 if(!defined('PHPWG_ROOT_PATH')) die ('Hacking attempt!');
 
-include_once("plugin_admin_form_element_db.php");
+include("form_element/form_element_db.php");
 
 //Fetch the template.
 global $template;
 
 $form_element_db = new form_element_db();
 
-$queryResult = $form_element_db->getAllFormElements();
-
-$form_elements = $form_element_db->makeArrayOfFormElements($queryResult);
+$form_elements = $form_element_db->getAllFormElements();
 
 #$smarty->assign('Name', 'Fred');
 $template -> set_filenames(
