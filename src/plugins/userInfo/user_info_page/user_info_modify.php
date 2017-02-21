@@ -9,6 +9,7 @@ include_once("user_info_db.php");
 include_once(PHPWG_ROOT_PATH.'include/common.inc.php');
 include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 include_once(PHPWG_ROOT_PATH.'admin/include/functions_upload.inc.php');
+include_once(PHPWG_ROOT_PATH.'plugins/userInfo/include/post_validation.class.php');
 
 $userInfo = new user_info_db();
 
@@ -19,7 +20,7 @@ foreach($_POST as $key => $value){
 }
 
 //check if all POST values are valid
-if($userInfo->AreValid($items)){
+if(PostValidation::AreValid($items)){
 
   //insert if everything is valid
   if(!($userInfo->userInfoExists($user['id']))){

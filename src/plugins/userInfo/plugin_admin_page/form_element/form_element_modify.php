@@ -7,6 +7,7 @@ include_once("form_element_db.php");
 include_once(PHPWG_ROOT_PATH.'include/common.inc.php');
 include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 include_once(PHPWG_ROOT_PATH.'admin/include/functions_upload.inc.php');
+include_once(PHPWG_ROOT_PATH.'plugins/userInfo/include/post_validation.class.php');
 
 $items = [];
 foreach($_POST as $key => $value){

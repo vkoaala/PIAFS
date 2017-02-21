@@ -5,16 +5,13 @@
 
 <h1>{'Test'|translate}</h1>
 <div id="userInfoForm">
-  <form method="POST">
-    <div>
-      <label> {'First Name'|translate}: </label>
-      <input type="text" name="fname" id="fname" value="{$USER_FNAME}"/>
-    </div>
-    <br>
-    <div>
-      <label> {'Last Name'|translate}: </label>
-      <input type="text" name="lname" id="lname" value="{$USER_LNAME}"/>
-    </div>
+    {foreach from=$FORM_ELEMENTS item=row}
+        <div>
+          <label> {$row[0]}: </label>
+          <input type="{$row[1]}" id="{$row[0]}"/>
+        </div>
+        <br>
+    {/foreach}
     <br>
     <button onclick="sendUserInfo()"> {'Save'|translate} </button>
   </form>

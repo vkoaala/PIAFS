@@ -8,7 +8,7 @@ class user_info_db
 
     function __construct()
     {
-        global $prefixeTable;
+        global $prefixeTable, $user;
 
         $this->table = $prefixeTable . 'users_info';
     }
@@ -24,6 +24,14 @@ class user_info_db
             return false;
         }
         return true;
+    }
+
+    function getUserInfo($userId){
+        $query = '
+            SELECT * 
+            FROM '. $this->table.'
+            WHERE id = '. $userId;
+        return pwg_db_fetch_assoc(pwg_query($query));
     }
 
     function insertInfo($id, $firstName, $lastName){
