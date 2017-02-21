@@ -22,7 +22,7 @@ function skeleton_tabsheet_before_select($sheets, $id)
   if ($id == 'photo')
   {
     $sheets['skeleton'] = array(
-      'caption' => l10n('Skeleton'),
+      'caption' => l10n('Edit text'),
       'url' => SKELETON_ADMIN.'-photo&amp;image_id='.$_GET['image_id'],
       );
   }

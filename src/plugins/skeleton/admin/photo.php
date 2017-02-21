@@ -34,8 +34,21 @@ SELECT *
 ;';
 $picture = pwg_db_fetch_assoc(pwg_query($query));
 
-
 # DO SOME STUFF HERE... or not !
+$results = array_values($picture);
+
+$path = $results[15];
+$handle = fopen($path, "r+");
+
+if(isset($_POST['editText'])){
+  ftruncate($handle,0);
+  $slash = stripslashes($_POST['editText']);
+  fwrite($handle, $slash);
+  header('Location: '.$_SERVER['REQUEST_URI']);
+}
+
+$contents = fread($handle, filesize($path));
+fclose($handle);
 
 
 /* Template */
@@ -44,6 +57,8 @@ $template->assign(array(
   'skeleton' => $conf['skeleton'],
   'TITLE' => render_element_name($picture),
   'TN_SRC' => DerivativeImage::thumb_url($picture),
+  'TXT' => $contents,
+  'CONFIRM' => $confirm
 ));
 
 $template->set_filename('skeleton_content', realpath(SKELETON_PATH . 'admin/template/photo.tpl'));
