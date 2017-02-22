@@ -1,11 +1,17 @@
 function sendUserInfo(){
+
+  var formElements = {};
+
+  $(".formElement").map(function (){
+    formElements[$(this).attr("id")] = $(this).val();
+  });
+
   jQuery.ajax({
     type: "POST",
     url: 'plugins/userInfo/user_info_page/user_info_modify.php',
     datatype: "json",
     data: {
-      fname: $('#fname').val(),
-      lname: $('#lname').val()
+      form_elements : formElements
     },
     complete: function (response) {
       console.log(JSON.stringify(response));

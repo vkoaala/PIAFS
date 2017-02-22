@@ -13,21 +13,21 @@ include_once(PHPWG_ROOT_PATH.'plugins/userInfo/include/post_validation.class.php
 
 $userInfo = new user_info_db();
 
-//create an array with all POST values
-$items = [];
-foreach($_POST as $key => $value){
-  $items[] = $value;
+$items= $_POST["form_elements"];
+$values = [];
+foreach($items as $key => $value){
+  $values[] = $value;
 }
 
 //check if all POST values are valid
-if(PostValidation::AreValid($items)){
+if(PostValidation::AreValid($values)){
 
   //insert if everything is valid
   if(!($userInfo->userInfoExists($user['id']))){
-    $userInfo->insertInfo($user['id'], $_POST["fname"], $_POST["lname"]);
+    $userInfo->insertInfo($user['id'], $items);
   }
   else{
-    $userInfo->modifyInfo($user['id'], $_POST["fname"], $_POST["lname"]);
+    //$userInfo->modifyInfo($user['id'], $items);
   }
   
 }

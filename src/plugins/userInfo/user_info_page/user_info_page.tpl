@@ -9,7 +9,7 @@
     {foreach from=$FORM_ELEMENTS item=row}
         <div>
           <label> {$row[0]}: </label>
-          <input type="{$row[1]}" id="{$row[0]}"/>
+          <input type="{$row[1]}" id="{$row[0]}" class="formElement" />
         </div>
         <br>
     {/foreach}

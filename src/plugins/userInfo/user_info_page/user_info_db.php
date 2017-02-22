@@ -8,7 +8,7 @@ class user_info_db
 
     function __construct()
     {
-        global $prefixeTable, $user;
+        global $prefixeTable;
 
         $this->table = $prefixeTable . 'form_element_info';
     }
@@ -34,15 +34,35 @@ class user_info_db
         return pwg_db_fetch_assoc(pwg_query($query));
     }
 
-    function insertInfo($id, $firstName, $lastName){
+    function insertInfo($id, $items){
+
+        $columns = $this-> getColumnNames($items);
+        $values = $this->getValuesName($id, $items);
+
         $query = '
-        INSERT INTO '. $this->table.'(id,firstName,lastName) 
-        VALUES (\''.$id.'\', \''.$firstName.'\', \''.$lastName.'\')
+        INSERT INTO '. $this->table.'('.$columns.') 
+        VALUES ('.$values.')
         ;';
         pwg_query($query);
     }
 
-    function modifyInfo($id, $firstName, $lastName){
+    function getColumnNames($items){
+        $columns = "id, ";
+        foreach($items as $key => $value){
+            $columns .= $key . ", ";
+        }
+        return rtrim($columns, ", ");
+    }
+
+    function getValuesName($id, $items){
+        $values = "'". $id . "',";
+        foreach($items as $key => $value){
+            $values .= "'" . $value . "', ";
+        }
+        return rtrim($values, ", ");
+    }
+
+    function modifyInfo($id, $items){
         $query = '
             UPDATE '.$this->table.'
             SET firstName = "'.$firstName.'",
