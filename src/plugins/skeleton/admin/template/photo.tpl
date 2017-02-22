@@ -17,7 +17,7 @@
 
     <p>
 
-      <input class="submit" type="submit" value="{'Save'|translate}" name="save_skeleton">
+      <input class="submit" type="submit" onclick="window.location.reload()" value="{'Save'|translate}" name="save_skeleton">
       <input type="reset" />
 
     </p>
