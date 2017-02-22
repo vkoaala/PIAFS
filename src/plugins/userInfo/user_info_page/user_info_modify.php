@@ -27,7 +27,7 @@ if(PostValidation::AreValid($values)){
     $userInfo->insertInfo($user['id'], $items);
   }
   else{
-    //$userInfo->modifyInfo($user['id'], $items);
+    $userInfo->modifyInfo($user['id'], $items);
   }
   
 }

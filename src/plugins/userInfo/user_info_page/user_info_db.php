@@ -46,7 +46,7 @@ class user_info_db
         pwg_query($query);
     }
 
-    function getColumnNames($items){
+    private function getColumnNames($items){
         $columns = "id, ";
         foreach($items as $key => $value){
             $columns .= $key . ", ";
@@ -54,7 +54,7 @@ class user_info_db
         return rtrim($columns, ", ");
     }
 
-    function getValuesName($id, $items){
+    private function getValuesName($id, $items){
         $values = "'". $id . "',";
         foreach($items as $key => $value){
             $values .= "'" . $value . "', ";
@@ -63,13 +63,23 @@ class user_info_db
     }
 
     function modifyInfo($id, $items){
+
+        $infoToUpdate = $this->getInfoToUpdate($items);
+
         $query = '
             UPDATE '.$this->table.'
-            SET firstName = "'.$firstName.'",
-                lastName = "'.$lastName.'"
+            SET '. $infoToUpdate .'
             WHERE id ='.$id.'
             ';
         pwg_query($query);
+    }
+
+    private function getInfoToUpdate($items){
+        $infoToUpdate = "";
+        foreach($items as $key => $value){
+            $infoToUpdate .= $key . " = '" . $value . "', ";
+        }
+        return rtrim($infoToUpdate, ", ");
     }
 
 }

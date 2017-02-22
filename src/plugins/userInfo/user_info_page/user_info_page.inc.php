@@ -6,20 +6,24 @@ include_once(USER_INFO_PATH."/plugin_admin_page/form_element/form_element_db.php
 
 global $page, $template, $conf, $user, $tokens, $pwg_loaded_plugins, $prefixeTable;
 
-//Get info to send to the form
-$userInfo = new user_info_db();
-
-$result = $userInfo->getUserInfo($user['id']);
-
-if(!empty($result)){
-  $template->assign(array(
-
-  ));
-}
-
 //Get form elements to generate
 $form_element_db = new form_element_db();
 $form_elements = $form_element_db->getAllFormElements();
+
+//Get info to send to the form
+$userInfo = new user_info_db();
+$queryResult = $userInfo->getUserInfo($user['id']);
+
+//Add form info to form elements
+if(!empty($queryResult)){
+  for($i =0; $i < count($form_elements); $i++){
+    foreach($queryResult as $key => $value){
+      if($form_elements[$i][0] == $key){
+        $form_elements[$i][2] = $value;
+      }
+    }
+  }
+}
 
 $template->assign(array(
   // this is useful when having big blocks of text which must be translated
