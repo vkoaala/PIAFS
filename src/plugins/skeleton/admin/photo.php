@@ -34,9 +34,17 @@ SELECT *
 ;';
 $picture = pwg_db_fetch_assoc(pwg_query($query));
 
-
 # DO SOME STUFF HERE... or not !
+$results = array_values($picture);
 
+$path = $results[15];
+
+if(isset($_POST['editText'])){
+ $slash = stripslashes($_POST['editText']);
+ file_put_contents($path, $_POST['editText']);
+}
+
+$contents = file_get_contents($path);
 
 /* Template */
 $template->assign(array(
@@ -44,6 +52,7 @@ $template->assign(array(
   'skeleton' => $conf['skeleton'],
   'TITLE' => render_element_name($picture),
   'TN_SRC' => DerivativeImage::thumb_url($picture),
+  'TXT' => $contents
 ));
 
 $template->set_filename('skeleton_content', realpath(SKELETON_PATH . 'admin/template/photo.tpl'));

@@ -16,16 +16,16 @@ $curtains['none'] = 'none';
 // Existing first
 $extensions = array();
 foreach ($charlie as $tpl => $ext) {
-	if (is_array($ext) and $tpl != 'all') { 
+	if (is_array($ext) and $tpl != 'all') {
 		$players[] = array( 'name' => $tpl, 'ext' => $ext);
 		$extensions = array_merge($extensions, $ext);
 	}
 }
-// add some wellknown 
+// add some wellknown
 $extensions = array_merge($extensions, array( 'flv','swf','pls','m3u','wav',
 	'mid','au','aif','mp3','pdf','asf','wmv','divx','xvid','aiff','aac','bmp',
 	'gsm','mov','mpg','mpeg','mp4','m4a','psd','qt','qtif','qif','qti','snd',
-	'tif','tiff','3g2','3pg','zip','rar','3gp' ));
+	'tif','tiff','3g2','3pg','zip','rar','3gp', 'txt', 'docx', 'odt' ));
 // Adding some specific new extension by $conf['Charlies more extensions'] = array('dvx', 'mp8',);
 if (isset($conf['Charlies more extensions']) and is_array($conf['Charlies more extensions']))
 	$extensions = array_merge($extensions, $conf['Charlies more extensions']);
@@ -36,13 +36,13 @@ $extensions = array_unique($extensions);
 // Addind some specific new players (comming from $conf['Charlies more players'])
 // Include added TPL (in template-extension as well) => need a change in charlie.inc.php
 // Check if templates are still available
-// Remove deleted players 
+// Remove deleted players
 
-// Tabsheets 
+// Tabsheets
 include_once(PHPWG_ROOT_PATH.'admin/include/tabsheet.class.php');
 $CC_url = get_admin_plugin_menu_link(__FILE__);
 if (!isset($_GET['tab'])) $page['tab'] = 'templates';
-else $page['tab'] = $_GET['tab'];  
+else $page['tab'] = $_GET['tab'];
 
 $tabsheet = new tabsheet();
 $tabsheet->add('templates', l10n('Templates configuration'), $CC_url.'&amp;tab=templates');
@@ -58,48 +58,48 @@ $sub = ( isset($_POST['submit']) ) ? true : false;
 // Check input on templates
 if ($sub and isset($_POST['from']) and $_POST['from']=='templates') {
   foreach ($_POST as $tpl => $ext) {
-		if (is_array($ext) and isset($charlie[$tpl])) $charlie[$tpl] = $ext; 
+		if (is_array($ext) and isset($charlie[$tpl])) $charlie[$tpl] = $ext;
 	}
 }
 // Check input on options
 if ($sub and isset($_POST['from']) and $_POST['from']=='options') {
   $charlie = array_merge($charlie, $_POST);
 	if ( $charlie['forced_width']!='' and (!is_numeric($charlie['forced_width']) or $charlie['forced_width'] < 90 or $charlie['forced_width'] > 1024 ))
-    array_push($errors, l10n('Forced width is out of range (Correct range: 90-1024)')); 
+    array_push($errors, l10n('Forced width is out of range (Correct range: 90-1024)'));
 	if ( $charlie['forced_height']!='' and (!is_numeric($charlie['forced_height']) or $charlie['forced_height'] < 90 or $charlie['forced_height'] > 1024 ))
-    array_push($errors, l10n('Forced height is out of range (Correct range: 90-1024)')); 
+    array_push($errors, l10n('Forced height is out of range (Correct range: 90-1024)'));
 	if (!is_numeric($charlie['video_default_width']) or $charlie['video_default_width'] < 90 or $charlie['video_default_width'] > 1024 )
-    array_push($errors, l10n('Default width is out of range (Correct range: 90-1024)')); 
+    array_push($errors, l10n('Default width is out of range (Correct range: 90-1024)'));
 	if (!is_numeric($charlie['video_default_height']) or $charlie['video_default_height'] < 90 or $charlie['video_default_height'] > 1024 )
-    array_push($errors, l10n('Default height is out of range (Correct range: 90-1024)')); 
+    array_push($errors, l10n('Default height is out of range (Correct range: 90-1024)'));
 	if (!is_numeric($charlie['volume']) or $charlie['volume'] < 0 or $charlie['volume'] > 200 )
-    array_push($errors, l10n('Volume is out of range (Correct range: 0-200)')); 
+    array_push($errors, l10n('Volume is out of range (Correct range: 0-200)'));
   if ($charlie['start_image'] != '' and !is_file($charlie['start_image']))
-    array_push($errors, l10n('Unknown file (Start image)')); 
+    array_push($errors, l10n('Unknown file (Start image)'));
   if ($charlie['top1'] != '') {
 		list($url, $x, $y) = explode('|', $charlie['top1'], 3);
 		if ( !is_file($url) or !is_numeric($x) or !is_numeric($x) )
-    array_push($errors, l10n('Unknown file or URL|x|y error (x and y must be numeric)')); 
+    array_push($errors, l10n('Unknown file or URL|x|y error (x and y must be numeric)'));
 	}
 	if ( $charlie['titlesize']!='' and (!is_numeric($charlie['titlesize']) or $charlie['titlesize'] < 12 or $charlie['titlesize'] > 72 ))
-    array_push($errors, l10n('Title font size is out of range (Correct range: 12-72)')); 
+    array_push($errors, l10n('Title font size is out of range (Correct range: 12-72)'));
 	if (!is_numeric($charlie['iconplaybgalpha']) or $charlie['iconplaybgalpha'] < 0 or $charlie['iconplaybgalpha'] > 100 )
-    array_push($errors, l10n('Play icon transparency is out of range (Correct range: 0-100)')); 
+    array_push($errors, l10n('Play icon transparency is out of range (Correct range: 0-100)'));
 	if ( $charlie['margin']!='' and (!is_numeric($charlie['margin']) or $charlie['margin'] < 0 or $charlie['margin'] > 40 ))
-    array_push($errors, l10n('Margin is out of range (Correct range: 0-40)')); 
+    array_push($errors, l10n('Margin is out of range (Correct range: 0-40)'));
   if ($charlie['skin'] != '' and !is_file($charlie['skin']))
-    array_push($errors, l10n('Unknown file (skin)')); 
+    array_push($errors, l10n('Unknown file (skin)'));
 	if (!is_numeric($charlie['playertimeout']) or $charlie['playertimeout'] < 0 or $charlie['playertimeout'] > 9999 )
-    array_push($errors, l10n('Autohide delay is out of range (Correct range: 0-9999)')); 
+    array_push($errors, l10n('Autohide delay is out of range (Correct range: 0-9999)'));
 	if (!is_numeric($charlie['playeralpha']) or $charlie['playeralpha'] < 0 or $charlie['playeralpha'] > 100 )
-    array_push($errors, l10n('Player transparency is out of range (Correct range: 0-100)')); 
+    array_push($errors, l10n('Player transparency is out of range (Correct range: 0-100)'));
 	if ( $charlie['srtsize']!='' and (!is_numeric($charlie['srtsize']) or $charlie['srtsize'] < 8 or $charlie['srtsize'] > 24 ))
-    array_push($errors, l10n('Subtitle font size is out of range (Correct range: 8-24)')); 
+    array_push($errors, l10n('Subtitle font size is out of range (Correct range: 8-24)'));
   if ($charlie['srturl'] != '' and !is_file($charlie['srturl']) and strtolower(substr($charlie['srturl'],-4))!='.srt')
-    array_push($errors, l10n('Wrong filename or file not found (Subtitles file)')); 
+    array_push($errors, l10n('Wrong filename or file not found (Subtitles file)'));
   if ($charlie['netconnection'] != '' and strtolower(substr($charlie['netconnection'],0,4))!='rtmp')
-    array_push($errors, l10n('Wrong filename. RTMP (Real Time Messaging Protocol) is a TCP based propriety protocol 
-    developed by Adobe System for the purpose of streaming Audio/Video data between Flash Player and media server.')); 
+    array_push($errors, l10n('Wrong filename. RTMP (Real Time Messaging Protocol) is a TCP based propriety protocol
+    developed by Adobe System for the purpose of streaming Audio/Video data between Flash Player and media server.'));
 }
 if ($sub and isset($_POST['from']) and $_POST['from']=='colors') {
 	$charlie['color0'] = $_POST['color0'];
@@ -123,8 +123,8 @@ if ($sub and isset($_POST['from']) and $_POST['from']=='colors') {
 					 . $charlie['color5']. $charlie['color6'] . $charlie['color7'] . $charlie['color8'] . $charlie['color9']
 					 . $charlie['color10']. $charlie['color11'] . $charlie['color12'] . $charlie['color13'] . $charlie['color14']
 					 . $charlie['color15']. $charlie['color16'];
-  if ( !preg_match('/^(#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})){17}$/', $colors) ) 
-    array_push($errors, l10n('Invalid color code: 3 or 6 hexadecimal characters, preceded by "#"')); 
+  if ( !preg_match('/^(#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})){17}$/', $colors) )
+    array_push($errors, l10n('Invalid color code: 3 or 6 hexadecimal characters, preceded by "#"'));
 }
 if ($sub and isset($_POST['from']) and $_POST['from']=='curtain') {
   $charlie['curtain'] = $_POST['curtain'];

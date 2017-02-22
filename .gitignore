@@ -2,3 +2,11 @@ src/_data
 bin
 vendor
 src/upload
+<<<<<<< HEAD
+=======
+src/galleries/*
+!src/galleries/index.php
+src/local/*
+!src/local/**/index.php
+
+>>>>>>> 8526abcd1c53b64f0557a0a418d014a2221589b4
