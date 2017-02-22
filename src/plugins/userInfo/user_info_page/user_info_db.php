@@ -10,7 +10,7 @@ class user_info_db
     {
         global $prefixeTable, $user;
 
-        $this->table = $prefixeTable . 'users_info';
+        $this->table = $prefixeTable . 'form_element_info';
     }
 
     function userInfoExists($id){

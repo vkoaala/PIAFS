@@ -10,6 +10,8 @@ class userInfo_maintain extends PluginMaintain
 {
   private $table;
   private $dir;
+  private $formElementTable;
+  private $historyTable;
 
   function __construct($plugin_id)
   {
@@ -18,7 +20,7 @@ class userInfo_maintain extends PluginMaintain
     global $prefixeTable;
 
     // Class members can't be declared with computed values so initialization is done here
-    $this->table = $prefixeTable . 'users_info';
+    $this->table = $prefixeTable . 'form_element_info';
     $this->formElementTable = $prefixeTable . 'form_element';
     $this->historyTable = $prefixeTable . 'history';
     $this->dir = PHPWG_ROOT_PATH . PWG_LOCAL_DIR . 'userInfo/';
@@ -45,8 +47,6 @@ class userInfo_maintain extends PluginMaintain
     pwg_query('
     CREATE TABLE IF NOT EXISTS `'. $this->table .'` (
       `id` int(11) unsigned NOT NULL,
-      `firstName` varchar(64) DEFAULT NULL,
-      `lastName` varchar(64) DEFAULT NULL,
       PRIMARY KEY (`id`)
     ) ENGINE=MyISAM DEFAULT CHARSET=utf8
     ;');

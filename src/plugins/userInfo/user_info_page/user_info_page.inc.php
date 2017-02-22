@@ -7,7 +7,7 @@ include_once(USER_INFO_PATH."/plugin_admin_page/form_element/form_element_db.php
 global $page, $template, $conf, $user, $tokens, $pwg_loaded_plugins, $prefixeTable;
 
 //Get info to send to the form
-$userInfo = new user_info_db();
+/*$userInfo = new user_info_db();
 
 $result = $userInfo->getUserInfo($user['id']);
 
@@ -16,7 +16,7 @@ if(!empty($result)){
   'USER_FNAME' => array_values($result)[1],
   'USER_LNAME' => array_values($result)[2]
   ));
-}
+}*/
 
 //Get form elements to generate
 $form_element_db = new form_element_db();
