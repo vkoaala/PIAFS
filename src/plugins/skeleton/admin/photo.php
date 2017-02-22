@@ -41,7 +41,7 @@ $path = $results[15];
 
 if(isset($_POST['editText'])){
  $slash = stripslashes($_POST['editText']);
- file_put_contents($path, $_POST['editText']);
+ file_put_contents($path,$slash);
 }
 
 $contents = file_get_contents($path);
