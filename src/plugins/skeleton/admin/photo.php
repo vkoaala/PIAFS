@@ -39,7 +39,7 @@ $results = array_values($picture);
 
 $path = $results[15];
 
-if(isset($_POST['editText'])){
+if(isset($_POST['editText']) && !empty($_POST["editText"])){
  $slash = stripslashes($_POST['editText']);
  file_put_contents($path,$slash);
 }
