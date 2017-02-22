@@ -17,6 +17,7 @@ function sendUserInfo(){
     },
     complete: function (response) {
       console.log(JSON.stringify(response));
+      location.reload();
     },
     error: function (response) {
       console.log(response);
