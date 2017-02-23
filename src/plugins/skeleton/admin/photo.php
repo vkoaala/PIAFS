@@ -38,17 +38,20 @@ $picture = pwg_db_fetch_assoc(pwg_query($query));
 $results = array_values($picture);
 
 $path = $results[15];
-$handle = fopen($path, "r+");
+//$handle = fopen($path, "r+");
 
-if(isset($_POST['editText'])){
+if(isset($_POST['editText']) && !empty($_POST["editText"])){
  $slash = stripslashes($_POST['editText']);
- $handle = fopen($path, "r+");
- fwrite($handle, $slash);
+ file_put_contents($path,$slash);
+
+ /*$handle = fopen($path, "r+");
+ fwrite($handle, $slash)*/;
 }
 
-$contents = fread($handle, filesize($path));
-fclose($handle);
 
+//$contents = fread($handle, filesize($path));
+//fclose($handle);
+$contents = file_get_contents($path);
 
 /* Template */
 $template->assign(array(

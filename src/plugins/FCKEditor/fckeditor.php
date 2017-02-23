@@ -33,6 +33,15 @@ function load_fckeditor_script($plugin_menu_links)
     $toolbar = $conf['fckeditor_toolbar_always_full'] ? 'Full' : 'Basic';
     $template->set_prefilter('picture_modify', 'add_remove_button');
   }
+
+  // Plugin EditTxt
+  elseif ($page['page'] == 'plugin')
+  {
+   $areas[] = 'editText';
+   $toolbar = $conf['fckeditor_toolbar_always_full'] ? 'Full' : 'Basic';
+   $template->set_prefilter('skeleton_content', 'add_remove_button');
+  }
+
   // Notification by mail
   elseif ($page['page'] == 'notification_by_mail')
   {
