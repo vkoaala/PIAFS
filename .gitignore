@@ -2,4 +2,7 @@ src/_data
 bin
 vendor
 src/upload
-test
+src/galleries/*
+!src/galleries/index.php
+src/local/*
+!src/local/**/index.php
