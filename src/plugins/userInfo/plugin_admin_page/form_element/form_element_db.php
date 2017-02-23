@@ -67,12 +67,26 @@ class form_element_db
     }
 
     function modifyFormElement($form_element_previous_name, $form_element_name, $form_element_type){
+        $this->updateFormElement($form_element_previous_name, $form_element_name, $form_element_type);
+
+        $this->changeColumnName($form_element_previous_name, $form_element_name);
+    }
+
+    private function updateFormElement($form_element_previous_name, $form_element_name, $form_element_type){
         $query = '
             UPDATE '.$this->form_element_table.'
                 SET form_element_name = \''.$form_element_name.'\',
                     form_element_type = \''.$form_element_type.'\'
                 WHERE form_element_name = \''.$form_element_previous_name.'\'
             ';
+        pwg_query($query);
+    }
+
+    private function changeColumnName($form_element_previous_name, $form_element_name){
+        $query = '
+            ALTER TABLE '. $this->table .'
+            CHANGE ' . $form_element_previous_name .' '. $form_element_name .' VARCHAR(64)
+        ';
         pwg_query($query);
     }
 
