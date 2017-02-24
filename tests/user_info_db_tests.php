@@ -1,6 +1,5 @@
 <?php
 
-require './vendor/autoload.php';
 include_once './src/plugins/userInfo/user_info_page/user_info_db.php';
 
 class UserInfoDbTest extends PHPUnit_Framework_TestCase

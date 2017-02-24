@@ -1,6 +1,5 @@
 <?php
 
-require './vendor/autoload.php';
 include_once './src/plugins/userInfo/include/post_validation.class.php';
 
 class PostValidationTest extends PHPUnit_Framework_TestCase
