@@ -12,7 +12,9 @@
          verbose="true">
 
     <testsuite name="PIAFS">
-        <directory suffix="Test.php">../tests/*</directory>
+      <directory suffix="Test.php">../tests/form_element_db_tests.php</directory>
+      <directory suffix="Test.php">../tests/post_validation_tests.php</directory>
+      <directory suffix="Test.php">../tests/form_element_db_tests.php</directory>
     </testsuite>
 
     <filter>
